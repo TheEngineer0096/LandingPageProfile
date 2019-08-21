@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans&display=swap');
+
+
+:root {
+
+	--accent: #DE677E;
+	--light: #B4BFE3;
+	--lighttext: #97A0BE;
+	--dark:#373756;
+	--overlaystart: rgba(55,55,86,0.9);
+	--overlayend: rgba(55,55,86,0.7);
+	--ease: all 0.3s ease 0s;
+
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+}
+
+
+body {
+	background-color: var(--dark);
+}
+
+
+h1 , i {
+	color: var(--light);
+}
+
+p, a {
+	color: var(--light);
+	text-decoration: none;
+}
+
+h1 {
+	font-family: "Work Sans", sans-serif;
+	font-size: 72px;
+	font-weight: 300;
+}
+
+.wrapper {
+	height: 100vh;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr; 
+	
+	grid-template-areas: "top"; 
+}
+
+	.top {
+		grid-area: top;
+		background-image: linear-gradient(to right, var(--overlaystart), var(--overlayend)), url(images/bg.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		display: grid;
+		grid-template-columns:600px 1fr 1fr 600px;
+		grid-gap: 20px;
+}
+
+.top-content {
+	align-self: center;
+	justify-self:center;
+	padding: 30px;
+}
+
+
+.subtitle {
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+
+
+.title {
+	margin-bottom: 80px;
+
+}
+
+
+.underline {
+	text-decoration: none;
+	position: relative;
+}
+
+.underline:after {
+content: "";
+position:absolute;
+left: 0;
+bottom: -15px;
+border-width: 1.5px;
+border-style: solid;
+color: var(--accent);
+animation-name: underline;
+animation-duration: 1s;
+animation-fill-mode: forwards;
+animation-timing-function: ease;
+
+}
+
+@keyframes underline {
+	0% { width: 0%; }
+	100% {
+		width: 100%;
+	}
+}
+
+
+.top-profile {
+	align-self: center;
+	justify-content: center;
+	background-image: url(images/profile.jpg);
+	width: 526px;
+	height: 526px;
+	background-position: center;
+	border-radius: 25px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: 10px 17px 32px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 17px 32px -4px rgba(0,0,0,0.75);
+box-shadow: 10px 17px 32px -4px rgba(0,0,0,0.75);
+
+}
+
+.social {
+	display: flex;
+
+}
+
+.social-item {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+
+}
+
+.social-item:not(:first-child){
+	margin-left: 50px;
+}
+
+i {
+	font-size: 25px;
+}
+
+.social-copy {
+font-family: "Open Sans", sans-serif;
+font-size: 18px;
+font-weight: 400;
+margin-left: 15px;
+transition: var(--ease);
+}
+
+.social-copy:hover {
+	filter: brightness(150%);
+}
+
+
+
+
+
+
